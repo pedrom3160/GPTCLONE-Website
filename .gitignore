@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Editor and OS noise
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+Thumbs.db
+.DS_Store
+
+# Local environment files (never commit secrets)
+.env
+.env.*
+*.local
+
+# npm debug logs
+npm-debug.log*
