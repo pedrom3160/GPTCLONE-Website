@@ -1,11 +1,11 @@
 import { Link } from 'react-router'
 import {
-  AlertCircle, ArrowRight, Binary, CheckCircle2, Clock3, Database, Gauge, Network, Server, Terminal, Workflow, Zap,
+  AlertCircle, ArrowRight, Binary, CheckCircle2, Clock3, Cpu, Database, Gauge, GraduationCap, HeartHandshake, Microscope, Network, Quote, Server, Sparkles, Terminal, Workflow, Zap,
 } from 'lucide-react'
 import { usePageMeta } from '../lib/usePageMeta'
 import { useLanguage } from '../i18n/LanguageContext'
 import { Container, LinkButton, MonoTag, PageHero, SectionHeader, StatusBadge } from '../components/ui'
-import type { HomeRoadmapLine, StatItem, TechId } from '../i18n/types'
+import type { HomeRoadmapLine, Pillar, PillarId, StatItem, TechId } from '../i18n/types'
 
 const AREA_ICONS: Record<TechId, typeof Terminal> = {
   foundations: Terminal,
@@ -16,6 +16,13 @@ const AREA_ICONS: Record<TechId, typeof Terminal> = {
   inference: Zap,
   'data-engineering': Database,
   'api-interface': Server,
+}
+
+const PILLAR_ICONS: Record<PillarId, typeof Cpu> = {
+  ai: Cpu,
+  research: Microscope,
+  academy: GraduationCap,
+  human: HeartHandshake,
 }
 
 const STAT_TONES: Record<StatItem['tone'], string> = {
@@ -44,6 +51,7 @@ export function HomePage() {
         titlePlain={home.heroTitlePlain}
         titleAccent={home.heroTitleAccent}
         lede={home.heroLede}
+        tagline={home.heroTagline}
         actions={[
           { label: home.heroPrimary, to: pageHref('about'), primary: true },
           { label: home.heroSecondary, to: pageHref('roadmap') },
@@ -60,6 +68,42 @@ export function HomePage() {
             </li>
           ))}
         </ul>
+      </Container>
+
+      {/* Four pillars */}
+      <Container className="pt-24">
+        <SectionHeader kicker={home.pillarsKicker} title={home.pillarsTitle} text={home.pillarsText} />
+        <ul className="grid gap-4 lg:grid-cols-2">
+          {home.pillars.map((pillar) => (
+            <PillarCard key={pillar.id} pillar={pillar} />
+          ))}
+        </ul>
+      </Container>
+
+      {/* People first — institutional philosophy */}
+      <Container className="pt-24">
+        <SectionHeader kicker={home.philosophyKicker} title={home.philosophyTitle} />
+        <article className="panel-raised relative overflow-hidden p-6 sm:p-10">
+          <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(50%_60%_at_85%_-10%,var(--glow),transparent_70%)]" />
+          <blockquote className="relative">
+            <Quote aria-hidden="true" className="h-6 w-6 text-accent" />
+            <p className="mt-4 max-w-3xl font-display text-2xl font-semibold leading-snug tracking-tight text-ink sm:text-[28px]">
+              {home.philosophyQuote}
+            </p>
+          </blockquote>
+          <p className="relative mt-6 max-w-3xl text-[15px] leading-relaxed text-ink-soft">{home.philosophyText}</p>
+          <ul className="relative mt-8 flex flex-wrap gap-2.5">
+            {home.philosophyValues.map((value) => (
+              <li
+                key={value}
+                className="inline-flex items-center gap-1.5 rounded-full border border-line bg-elevated px-3.5 py-1.5 text-[13px] font-medium text-ink-soft"
+              >
+                <Sparkles aria-hidden="true" className="h-3.5 w-3.5 text-accent" />
+                {value}
+              </li>
+            ))}
+          </ul>
+        </article>
       </Container>
 
       {/* Mission */}
@@ -179,6 +223,45 @@ export function HomePage() {
         </ul>
       </Container>
     </>
+  )
+}
+
+/** One institutional pillar — icon, declared status, scope and optional real link. */
+function PillarCard({ pillar }: { pillar: Pillar }) {
+  const { pageHref } = useLanguage()
+  const Icon = PILLAR_ICONS[pillar.id]
+  return (
+    <li id={`pillar-${pillar.id}`} className="panel-raised flex flex-col p-6 sm:p-8">
+      <div className="flex items-start justify-between gap-3">
+        <span aria-hidden="true" className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-line bg-accent-soft">
+          <Icon className="h-5 w-5 text-accent" />
+        </span>
+        <StatusBadge status={pillar.status} />
+      </div>
+      <p className="mt-5 font-mono text-[11px] font-semibold uppercase tracking-[0.16em] text-accent">{pillar.kicker}</p>
+      <h3 className="mt-1.5 font-display text-xl font-semibold tracking-tight text-ink">{pillar.title}</h3>
+      <p className="mt-3 text-sm leading-relaxed text-ink-soft">{pillar.text}</p>
+      <ul className="mt-4 flex flex-col gap-2">
+        {pillar.bullets.map((bullet) => (
+          <li key={bullet} className="flex items-start gap-2.5 text-[13px] leading-relaxed text-muted">
+            <span aria-hidden="true" className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-accent/70" />
+            <span>{bullet}</span>
+          </li>
+        ))}
+      </ul>
+      {pillar.formula !== null && (
+        <p className="mt-4 w-fit rounded-lg border border-line bg-deep/40 px-3 py-2 font-mono text-[11px] font-semibold uppercase tracking-wider text-accent">
+          {pillar.formula}
+        </p>
+      )}
+      {pillar.page !== null && pillar.linkLabel !== null && (
+        <div className="mt-5">
+          <LinkButton to={pageHref(pillar.page)} variant="secondary">
+            {pillar.linkLabel}
+          </LinkButton>
+        </div>
+      )}
+    </li>
   )
 }
 

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
-import { useLocation } from 'react-router'
-import { Link, CheckCircle2, ChevronDown } from 'lucide-react'
+import { Link, useLocation } from 'react-router'
+import { CheckCircle2, ChevronDown } from 'lucide-react'
 import { useLanguage } from '../i18n/LanguageContext'
 import { LANGUAGES } from '../i18n/languages'
 import type { LangCode } from '../i18n/types'

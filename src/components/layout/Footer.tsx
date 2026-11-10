@@ -62,6 +62,9 @@ export function Footer() {
         <div>
           <Logo />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">{content.footer.blurb}</p>
+          <p className="mt-3 font-mono text-[11px] font-semibold uppercase tracking-wider text-accent">
+            {content.footer.tagline}
+          </p>
           <p className="mt-3 font-mono text-[11px] uppercase tracking-wider text-muted">{content.footer.builtNote}</p>
         </div>
         <FooterNav pages={PROJECT_LINKS} label={content.footer.projectTitle} />

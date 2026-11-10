@@ -1,4 +1,4 @@
-import { CheckCircle2, CircleAlert } from 'lucide-react'
+import { CheckCircle2, CircleAlert, Quote } from 'lucide-react'
 import { usePageMeta } from '../lib/usePageMeta'
 import { useLanguage } from '../i18n/LanguageContext'
 import { Container, MonoTag, PageHero, SectionHeader } from '../components/ui'
@@ -43,6 +43,28 @@ export function AboutPage() {
             <p className="mt-4 text-[15px] leading-relaxed text-ink-soft sm:text-base">{about.vision.text}</p>
           </article>
         </div>
+      </Container>
+
+      {/* People and AI */}
+      <Container className="pt-20">
+        <SectionHeader kicker={about.peopleKicker} title={about.peopleTitle} text={about.peopleIntro} />
+        <article className="panel-raised relative overflow-hidden p-6 sm:p-8">
+          <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(50%_60%_at_90%_-10%,var(--glow),transparent_70%)]" />
+          <blockquote className="relative">
+            <Quote aria-hidden="true" className="h-5 w-5 text-accent" />
+            <p className="mt-3 max-w-3xl font-display text-xl font-semibold leading-snug tracking-tight text-ink sm:text-2xl">
+              {about.peopleQuote}
+            </p>
+          </blockquote>
+        </article>
+        <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {about.people.map((item) => (
+            <li key={item.title} className="panel p-6">
+              <h3 className="font-display text-[15px] font-semibold tracking-tight text-ink">{item.title}</h3>
+              <p className="mt-2 text-[13px] leading-relaxed text-muted">{item.text}</p>
+            </li>
+          ))}
+        </ul>
       </Container>
 
       {/* Technological independence */}

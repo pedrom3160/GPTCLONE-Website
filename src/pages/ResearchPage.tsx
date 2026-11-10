@@ -79,6 +79,30 @@ export function ResearchPage() {
           ))}
         </ul>
       </Container>
+
+      {/* Research and social responsibility */}
+      <Container className="pt-20">
+        <article className="panel-raised relative overflow-hidden p-6 sm:p-10">
+          <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(45%_70%_at_100%_-10%,var(--glow),transparent_70%)]" />
+          <div className="relative grid gap-8 lg:grid-cols-2 lg:items-start">
+            <div>
+              <p className="mono-label mb-3">{research.responsibilityKicker}</p>
+              <h2 className="font-display text-2xl font-semibold tracking-tight text-ink">
+                {research.responsibilityTitle}
+              </h2>
+              <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-ink-soft">{research.responsibilityText}</p>
+            </div>
+            <ul className="flex flex-col gap-3">
+              {research.responsibilityPoints.map((point) => (
+                <li key={point} className="flex items-start gap-2.5 text-sm leading-relaxed text-ink-soft">
+                  <span aria-hidden="true" className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </article>
+      </Container>
     </>
   )
 }

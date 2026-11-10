@@ -170,6 +170,24 @@ export interface HomeRoadmapLine {
   text: string
 }
 
+export type PillarId = 'ai' | 'research' | 'academy' | 'human'
+
+export interface Pillar {
+  id: PillarId
+  /** Short role label, e.g. "Pilar 1 · Missão tecnológica". */
+  kicker: string
+  title: string
+  text: string
+  /** Optional formula line (e.g. the Academy pedagogy), null when not applicable. */
+  formula: string | null
+  bullets: string[]
+  status: DevStatus
+  /** Page to link, only when a real destination exists; null otherwise. */
+  page: PageId | null
+  /** Label of the link; null when `page` is null (no invented destinations). */
+  linkLabel: string | null
+}
+
 export interface SiteContent {
   meta: {
     tagline: string
@@ -200,6 +218,8 @@ export interface SiteContent {
 
   footer: {
     blurb: string
+    /** Institutional motto — kept in English across all languages. */
+    tagline: string
     projectTitle: string
     communityTitle: string
     statusTitle: string
@@ -221,13 +241,24 @@ export interface SiteContent {
     heroTitlePlain: string
     heroTitleAccent: string
     heroLede: string
+    /** Institutional message line inside the hero ("Building independent AI…"). */
+    heroTagline: string
     heroPrimary: string
     heroSecondary: string
     stats: StatItem[]
+    pillarsKicker: string
+    pillarsTitle: string
+    pillarsText: string
+    pillars: Pillar[]
     missionKicker: string
     missionTitle: string
     missionText: string
     missionBullets: string[]
+    philosophyKicker: string
+    philosophyTitle: string
+    philosophyQuote: string
+    philosophyText: string
+    philosophyValues: string[]
     honestTitle: string
     honestDone: StatusPoint[]
     honestPlanned: StatusPoint[]
@@ -256,6 +287,11 @@ export interface SiteContent {
     history: { date: string; title: string; text: string }[]
     mission: { title: string; text: string }
     vision: { title: string; text: string }
+    peopleKicker: string
+    peopleTitle: string
+    peopleIntro: string
+    people: { title: string; text: string }[]
+    peopleQuote: string
     independenceKicker: string
     independenceTitle: string
     independenceText: string
@@ -293,6 +329,10 @@ export interface SiteContent {
     logText: string
     methodologyTitle: string
     methodology: { title: string; text: string }[]
+    responsibilityKicker: string
+    responsibilityTitle: string
+    responsibilityText: string
+    responsibilityPoints: string[]
     releaseNote: string
   }
 
@@ -315,8 +355,13 @@ export interface SiteContent {
     heroLede: string
     audiencesTitle: string
     audiences: string[]
+    audiencesNote: string
     areasTitle: string
     areas: ContributeArea[]
+    humanKicker: string
+    humanTitle: string
+    humanText: string
+    humanPoints: string[]
     processKicker: string
     processTitle: string
     steps: { title: string; text: string }[]
@@ -329,6 +374,10 @@ export interface SiteContent {
     heroLede: string
     noticeTitle: string
     noticeText: string
+    impactKicker: string
+    impactTitle: string
+    impactText: string
+    impact: { title: string; text: string }[]
     financialTitle: string
     financialText: string
     financial: FinancialArea[]

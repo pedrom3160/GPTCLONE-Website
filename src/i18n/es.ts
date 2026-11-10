@@ -8,7 +8,7 @@ export const content: SiteContent = {
       home: {
         title: 'Una LLM construida desde cero',
         description:
-          'GPTCLONE es un proyecto de investigación independiente: desarrollamos y entrenamos una LLM propia — tokenizador, Transformer, datos, entrenamiento e inferencia — sin pesos preentrenados de terceros.',
+          'GPTCLONE desarrolla y entrena una LLM propia y promueve investigación, aprendizaje gratuito y participación humana — cuatro misiones, las personas primero.',
       },
       about: {
         title: 'Sobre el proyecto',
@@ -79,6 +79,7 @@ export const content: SiteContent = {
   footer: {
     blurb:
       'Proyecto de investigación independiente: una LLM desarrollada y entrenada desde cero — el tokenizador, la arquitectura, los pesos, el entrenamiento y la inferencia son nuestros.',
+    tagline: 'People first. AI for everyone.',
     projectTitle: 'Proyecto',
     communityTitle: 'Participar',
     statusTitle: 'Estado',
@@ -98,7 +99,7 @@ export const content: SiteContent = {
   },
 
   common: {
-    learnMore: 'Saber más',
+    learnMore: 'Ver la tecnología',
     viewRoadmap: 'Ver el roadmap',
     getInTouch: 'Contactar',
   },
@@ -109,6 +110,7 @@ export const content: SiteContent = {
     heroTitleAccent: 'desde cero, del entrenamiento a la inferencia.',
     heroLede:
       'GPTCLONE desarrolla y entrena su propio modelo de lenguaje a gran escala: tokenizador propio, arquitectura Transformer propia, pesos inicializados aleatoriamente por nuestro código, datasets seleccionados por el proyecto y un ciclo de entrenamiento enteramente nuestro. Ningún peso preentrenado de terceros entra en ninguna fase.',
+    heroTagline: 'Construir IA independiente. Crear oportunidades. Las personas primero.',
     heroPrimary: 'Conocer el proyecto',
     heroSecondary: 'Ver el roadmap',
     stats: [
@@ -116,6 +118,80 @@ export const content: SiteContent = {
       { value: '8,7 M parámetros', label: 'Primer modelo especificado, todavía no entrenado', tone: 'neutral' },
       { value: 'T600 · 4 GB', label: 'GPU local auditada y medida', tone: 'neutral' },
       { value: 'M1 bloqueado', label: 'Gates de datos por resolver, sin progreso inventado', tone: 'blocked' },
+    ],
+    pillarsKicker: 'Cuatro misiones',
+    pillarsTitle: 'GPTCLONE en cuatro pilares',
+    pillarsText:
+      'Un único proyecto, cuatro misiones asumidas: la tecnología que construimos, el conocimiento que buscamos, el aprendizaje que queremos compartir y las personas a quienes queremos dar oportunidades. El estado real de cada pilar está declarado — como todo lo demás.',
+    pillars: [
+      {
+        id: 'ai',
+        kicker: 'Pilar 1 · Misión tecnológica',
+        title: 'GPTCLONE AI',
+        text: 'Nuestra misión tecnológica: construir una LLM independiente comprendiendo y desarrollando cada componente — no adoptar un modelo preentrenado y cambiarle el nombre.',
+        formula: null,
+        bullets: [
+          'Arquitectura Transformer y tokenizador propios',
+          'Pesos inicializados y entrenados por el proyecto',
+          'Training Engine e Inference Engine propios',
+          'API de servicio independiente',
+          'Investigación y desarrollo continuos',
+        ],
+        status: 'inProgress',
+        page: 'technology',
+        linkLabel: 'Ver la tecnología',
+      },
+      {
+        id: 'research',
+        kicker: 'Pilar 2 · Misión científica',
+        title: 'GPTCLONE Research',
+        text: 'Nuestra misión científica: producir conocimiento verificable sobre LLMs, Machine Learning y Deep Learning, arquitecturas Transformer, entrenamiento eficiente, inferencia, seguridad e infraestructura de IA — para compartirlo con la comunidad, dentro de las licencias y las reglas de publicación.',
+        formula: null,
+        bullets: [
+          'Large Language Models, Machine Learning y Deep Learning',
+          'Arquitecturas Transformer y entrenamiento eficiente',
+          'Inferencia, evaluación y escala pequeña',
+          'Seguridad y procedencia de artefactos',
+          'Infraestructura de inteligencia artificial',
+          'Conocimiento compartido con la comunidad, respetando licencias y límites de publicación',
+        ],
+        status: 'specified',
+        page: 'research',
+        linkLabel: 'Ver la investigación',
+      },
+      {
+        id: 'academy',
+        kicker: 'Pilar 3 · Misión educativa',
+        title: 'GPTCLONE Academy',
+        text: 'Una academia de aprendizaje gratuita, en preparación — pensada para personas desempleadas, profesiones transformadas por la automatización, quienes cambian de carrera, jóvenes y principiantes sin conocimientos de programación. El aprendizaje debe ser accesible sin formación académica previa y sostenido por donaciones y alianzas.',
+        formula: 'Learn → Practice → Build → Collaborate → Grow',
+        bullets: [
+          'Informática, hardware, matemáticas y álgebra',
+          'Python, programación y desarrollo de software',
+          'Inteligencia artificial, Machine Learning y Deep Learning',
+          'Redes, sistemas operativos, ciberseguridad y competencias digitales',
+        ],
+        status: 'planned',
+        page: null,
+        linkLabel: null,
+      },
+      {
+        id: 'human',
+        kicker: 'Pilar 4 · Misión humana y social',
+        title: 'GPTCLONE Human Initiative',
+        text: 'El compromiso a largo plazo de que el desarrollo de la IA cree oportunidades: acercar a las personas a la tecnología, convertir el miedo en conocimiento y el cambio en aprendizaje y participación. No prometemos empleos, salarios ni programas que todavía no existen — asumimos la misión y la construimos públicamente.',
+        formula: null,
+        bullets: [
+          'Involucrar a las personas en el desarrollo tecnológico',
+          'Colaboración, aprendizaje y recalificación',
+          'Estudiantes, investigadores y programadores junto al proyecto',
+          'Oportunidades profesionales a medida que el proyecto crezca',
+          'Colaboración entre personas y sistemas de IA',
+        ],
+        status: 'planned',
+        page: null,
+        linkLabel: null,
+      },
     ],
     missionKicker: 'Misión',
     missionTitle: 'Cada componente es de primera parte',
@@ -131,6 +207,21 @@ export const content: SiteContent = {
       'API de servicio independiente',
       'Interfaz propia',
       'Infraestructura propia a largo plazo',
+    ],
+    philosophyKicker: 'People first',
+    philosophyTitle: 'Las personas primero. IA para todos.',
+    philosophyQuote:
+      'No creemos que el futuro tenga que ser las personas contra las máquinas. Creemos que puede ser gente construyendo el futuro con la ayuda de las máquinas.',
+    philosophyText:
+      'Creemos que la inteligencia artificial debe fortalecer a las personas, ampliar el acceso al conocimiento y crear oportunidades para todos. Nuestro objetivo no es simplemente construir IA, sino ayudar a la gente a entenderla, aprender de ella y participar en la definición de su futuro.',
+    philosophyValues: [
+      'Esperanza',
+      'Responsabilidad',
+      'Inclusión',
+      'Conocimiento',
+      'Oportunidad',
+      'Colaboración',
+      'Independencia tecnológica',
     ],
     honestTitle: 'El estado real del desarrollo',
     honestDone: [
@@ -262,6 +353,34 @@ export const content: SiteContent = {
       title: 'Visión',
       text: 'Hacer que el proyecto sea open source, con el modelo, el código y la documentación examinables por cualquiera — la licencia de cada capa decidida con honestidad al final del programa.',
     },
+    peopleKicker: 'La dimensión humana',
+    peopleTitle: 'Personas e inteligencia artificial',
+    peopleIntro:
+      'La evolución de la IA transforma profesiones, elimina funciones y puede crear dificultades reales para quienes pierden el empleo. No vamos a ignorar ese problema, minimizarlo ni hacer promesas irreales. Nombrarlo con honestidad — y construir paso a paso una respuesta responsable — es el camino más sólido.',
+    people: [
+      {
+        title: 'El miedo tiene fundamento',
+        text: 'La automatización está transformando el trabajo: algunas funciones desaparecen y otras cambian de forma profunda. Para muchas personas eso genera incertidumbre legítima — tratar ese miedo como ignorancia es el punto de partida equivocado.',
+      },
+      {
+        title: 'El conocimiento no es un privilegio',
+        text: 'Quien comprende la tecnología está mejor situado para usarla y adaptarse. Democratizar el conocimiento sobre IA — sin barreras académicas — es la forma más directa de ampliar las oportunidades.',
+      },
+      {
+        title: 'Acercar a las personas la tecnología',
+        text: 'Queremos que construir, entrenar y usar una LLM deje de parecer un universo lejano: explicaciones claras, ejercicios y proyectos reales acercan a las personas en lugar de intimidarlas.',
+      },
+      {
+        title: 'Colaboración, no sustitución',
+        text: 'Defendemos la colaboración entre personas y sistemas de IA: máquinas para ampliar capacidades humanas, personas para preguntar, decidir y dar contexto. El futuro no se deja al azar — ni a las máquinas.',
+      },
+      {
+        title: 'Del cambio a la oportunidad',
+        text: 'El cambio tecnológico puede convertirse en aprendizaje: recalificación, nuevas competencias y nuevas formas de participar en el desarrollo. Esa transformación es la que la GPTCLONE Academy y la Human Initiative quieren apoyar — como misión asumida, todavía no operativa.',
+      },
+    ],
+    peopleQuote:
+      'No creemos que el futuro tenga que ser las personas contra las máquinas. Creemos que puede ser gente construyendo el futuro con la ayuda de las máquinas.',
     independenceKicker: 'Independencia tecnológica',
     independenceTitle: 'PyTorch es la calculadora; el modelo es nuestro',
     independenceText:
@@ -495,6 +614,16 @@ export const content: SiteContent = {
         text: 'Cada informe de evaluación declara lo que no se midió y si hubo regresión — sin promedios maquillados.',
       },
     ],
+    responsibilityKicker: 'Responsabilidad social',
+    responsibilityTitle: 'Investigación que sirve a las personas',
+    responsibilityText:
+      'La investigación técnica no es neutra: lo que se publica — y lo que se admite — condiciona a quien aprende de ello. Investigar con medición, procedencia y evaluación honesta es también responsabilidad social: producir conocimiento que cualquiera puede examinar, criticar y reutilizar.',
+    responsibilityPoints: [
+      'Los resultados solo se publican cuando están verificados — nunca antes.',
+      'Lo que no se midió se declara: ningún informe esconde sus limitaciones.',
+      'El conocimiento producido debería alimentar el aprendizaje gratuito de la futura GPTCLONE Academy.',
+      'La seguridad y la procedencia forman parte del alcance, no un apéndice.',
+    ],
     releaseNote:
       'Los informes, los datos de experimentos y las futuras publicaciones se enlazarán en esta página en el momento en que estén medidos y documentados.',
   },
@@ -666,7 +795,9 @@ export const content: SiteContent = {
     heroLede:
       'GPTCLONE es un proyecto pequeño con problemas interesantes — de las matemáticas a la infraestructura. La ambición es ser open source; hasta que esa puerta se abra, lo esencial es encontrar a las personas adecuadas y fijar expectativas.',
     audiencesTitle: 'Para quiénes',
-    audiences: ['Programadores', 'Estudiantes', 'Investigadores', 'Entusiastas'],
+    audiences: ['Programadores', 'Estudiantes', 'Investigadores', 'Técnicos de informática', 'Especialistas de hardware', 'Personas que quieren aprender', 'Quienes comparten la misión humana'],
+    audiencesNote:
+      'No hace falta ser especialista para participar: hay trabajo para distintos niveles de experiencia. Lo esencial son las ganas de aprender, la honestidad y el rigor — las pruebas, la revisión y la documentación se encargan del resto.',
     areasTitle: 'Áreas de interés',
     areas: [
       { id: 'python', title: 'Python', text: 'El idioma del proyecto: paquete, pruebas, scripts de operación y revisión de código.' },
@@ -679,6 +810,16 @@ export const content: SiteContent = {
       { id: 'data-engineering', title: 'Ingeniería de datos', text: 'Procedencia, dedup, cuotas, splits y manifests verificables.' },
       { id: 'nlp', title: 'Procesamiento del lenguaje natural', text: 'Datasets multilingües PT/EN/ES, evaluación y sondas de generación.' },
       { id: 'evaluation-docs', title: 'Evaluación y documentación', text: 'Rúbricas, informes honestos y documentación que enseña, no que disimula.' },
+    ],
+    humanKicker: 'La misión humana',
+    humanTitle: 'Participar también es aprender',
+    humanText:
+      'La GPTCLONE Academy y la Human Initiative están en fase planificada: todavía no existen cursos, profesores, certificaciones ni programas de apoyo. En esta etapa, la participación se centra en aprender junto al proyecto, colaborar en las áreas reales y ayudar a diseñar, con honestidad, las iniciativas humanas.',
+    humanPoints: [
+      'Aprender con el proyecto: las técnicas que especifica y mide podrán convertirse en material educativo en el futuro.',
+      'Ayudar a planificar la futura GPTCLONE Academy con propuestas concretas.',
+      'Reunir a estudiantes, investigadores y profesionales en torno al aprendizaje y la recalificación.',
+      'Buscar la colaboración entre personas e IA — probar, usar y comentar las herramientas cuando existan.',
     ],
     processKicker: 'Cómo funciona',
     processTitle: 'Del interés a la integración',
@@ -711,6 +852,17 @@ export const content: SiteContent = {
     noticeTitle: 'Aviso honesto',
     noticeText:
       'En esta fase no hay pagos implementados: no existen, ni se inventarán, datos bancarios ni carteras de criptomonedas. Cuando exista un mecanismo seguro, se anunciará en esta página y su uso aparecerá en la de transparencia.',
+    impactKicker: 'Alcance',
+    impactTitle: 'Lo que el apoyo podría sostener',
+    impactText:
+      'Si el necesario mecanismo de recolección llegara a existir, este es el alcance a que un apoyo podría destinarse — siempre con evaluación previa y registro público.',
+    impact: [
+      { title: 'Desarrollo de la LLM', text: 'El corazón del proyecto: ingeniería de datos, arquitectura, entrenamiento, inferencia y evaluación del modelo propio.' },
+      { title: 'Infraestructura', text: 'El laboratorio local — hardware, red, almacenamiento y electricidad que sostienen las corridas.' },
+      { title: 'Investigación', text: 'Las líneas actuales y futuras: medición, evaluaciones honestas y publicación de lo verificable.' },
+      { title: 'Recursos educativos', text: 'Materiales explicativos, ejercicios y proyectos que alimenten el aprendizaje gratuito.' },
+      { title: 'Futura GPTCLONE Academy', text: 'La operación gratuita de la iniciativa educativa — una escuela sostenida por donaciones y alianzas, en planificación.' },
+    ],
     financialTitle: 'Apoyo financiero',
     financialText: 'Dónde iría un apoyo, si se aceptara:',
     financial: [
@@ -760,6 +912,9 @@ export const content: SiteContent = {
       { title: 'Gastos', text: 'Electricidad, hosting, almacenamiento y mantenimiento, por periodo.' },
       { title: 'Adquisiciones', text: 'Resumen de comprobantes y del uso real del equipo comprado.' },
       { title: 'Informes periódicos', text: 'Resúmenes por intervalo con lo que entró, lo que salió y cómo se usó.' },
+      { title: 'Desarrollo', text: 'Los estados técnicos declarados — implementado, especificado, medido, planificado — en las páginas de Tecnología y Roadmap.' },
+      { title: 'Investigación', text: 'Resultados y diarios de experimentos, publicados cuando estén medidos y verificados — y nada antes de eso.' },
+      { title: 'Academy y misiones humanas', text: 'El estado real de las iniciativas educativas y sociales, desde la primera actividad hasta cualquier informe.' },
     ],
     currentTitle: 'Estado actual',
     currentText:

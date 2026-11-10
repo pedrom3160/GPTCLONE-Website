@@ -1,7 +1,9 @@
 import {
+  BookOpen,
   CircuitBoard,
   Cpu,
   FlaskConical,
+  GraduationCap,
   HardDrive,
   Heart,
   Info,
@@ -44,6 +46,8 @@ const HARDWARE_ICONS: Record<HardwareKindId, typeof CircuitBoard> = {
 
 const NOTICE_ICON = Info
 const HEART_ICON = Heart
+/** Impact list shares one icon per contract-ordered item (ids are not machine keys here). */
+const IMPACT_ICONS = [Cpu, Server, FlaskConical, BookOpen, GraduationCap]
 
 export function DonationsPage() {
   usePageMeta('donations')
@@ -63,6 +67,23 @@ export function DonationsPage() {
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-ink-soft">{donations.noticeText}</p>
           </div>
         </aside>
+      </Container>
+
+      {/* What support could sustain */}
+      <Container className="pt-20">
+        <SectionHeader kicker={donations.impactKicker} title={donations.impactTitle} text={donations.impactText} />
+        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {donations.impact.map((item, index) => {
+            const Icon = IMPACT_ICONS[index]
+            return (
+              <li key={item.title} className="panel p-6">
+                <Icon aria-hidden="true" className="h-5 w-5 text-cyan" />
+                <h3 className="mt-3 font-display text-[15px] font-semibold tracking-tight text-ink">{item.title}</h3>
+                <p className="mt-2 text-[13px] leading-relaxed text-muted">{item.text}</p>
+              </li>
+            )
+          })}
+        </ul>
       </Container>
 
       {/* Financial support */}

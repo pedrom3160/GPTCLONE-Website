@@ -94,12 +94,14 @@ export function PageHero({
   titlePlain,
   titleAccent,
   lede,
+  tagline,
   actions,
 }: {
   kicker: string
   titlePlain: string
   titleAccent?: string
   lede?: string
+  tagline?: string
   actions?: HeroAction[]
 }) {
   return (
@@ -123,6 +125,12 @@ export function PageHero({
           )}
         </h1>
         {lede !== undefined && <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-soft">{lede}</p>}
+        {tagline !== undefined && (
+          <p className="mt-6 max-w-2xl font-display text-lg font-semibold leading-snug tracking-tight text-ink sm:text-xl">
+            <span aria-hidden="true" className="mr-2.5 inline-block h-2 w-2 rounded-full bg-accent" />
+            {tagline}
+          </p>
+        )}
         {actions !== undefined && actions.length > 0 && (
           <div className="mt-9 flex flex-wrap gap-3">
             {actions.map((action) => (

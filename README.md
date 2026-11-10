@@ -11,6 +11,12 @@ sem serviços externos pagos e sem recolha de dados.
 ## Principais características
 
 - **React 19 + TypeScript + Vite + Tailwind CSS 4** e ícones Lucide.
+- **Filosofia institucional "People first. AI for everyone."** — a mensagem humana assume a mesma
+  importância que a tecnológica: tecnologia independente, responsabilidade, inclusão e
+  colaboração entre pessoas e IA.
+- **Quatro pilares** (apresentados na página inicial): **GPTCLONE AI** (em curso),
+  **GPTCLONE Research** (especificado), **GPTCLONE Academy** (planeada, sem cursos
+  anunciados) e **GPTCLONE Human Initiative** (planeada, missão de longo prazo).
 - **Nove páginas**: Início, Sobre, Tecnologia, Investigação, Roadmap, Collaborar,
   Donativos, Transparência e Contacto (mais uma página 404).
 - **Três idiomas com URLs próprios**: português de Portugal (`/pt`, predefinido),
@@ -95,9 +101,13 @@ cópia de `index.html`, para que o React Router assuma ao servidor endereços de
 - O **Milestone 0 (M0)** está concluído e a sua documentação é pública no repositório
   principal; o resultado de um treino exploratório (`INTERESTING`) é reportado com as
   métricas reais de treino/validação.
-- O **Milestone 1 (M1)** está bloqueado por barreiras de dados aúnca atravessadas
+- O **Milestone 1 (M1)** está bloqueado por barreiras de dados ainda por resolver
   (Wiliki PT, OSCAR PT, MiniLM EN/PT); o site indica isso explicitamente.
-- Nenhuma página identifica progresso que não esteja registado nos documentos oficiais.
+- A estimativa de esforço global (545–820 h ±40 %) é apresentada como estimativa
+  declarada, revista no fim de cada milestone — nunca como prazo ou promessa.
+- Nenhuma página identifica progresso que não esteja registado nos documentos oficiais;
+  a Academy e a Human Initiative aparecem sempre como iniciativas planeadas, nunca
+  como operacionais.
 
 ## Notas técnicas
 

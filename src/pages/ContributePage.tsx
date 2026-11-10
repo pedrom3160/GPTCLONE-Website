@@ -4,6 +4,7 @@ import {
   Cpu,
   Database,
   FileText,
+  HeartHandshake,
   LineChart,
   MessageSquare,
   Network,
@@ -51,6 +52,7 @@ export function ContributePage() {
             </span>
           ))}
         </div>
+        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted">{contribute.audiencesNote}</p>
       </Container>
 
       {/* Areas of interest */}
@@ -67,6 +69,19 @@ export function ContributePage() {
               </li>
             )
           })}
+        </ul>
+      </Container>
+
+      {/* Human mission */}
+      <Container className="pt-20">
+        <SectionHeader kicker={contribute.humanKicker} title={contribute.humanTitle} text={contribute.humanText} />
+        <ul className="grid gap-4 sm:grid-cols-2">
+          {contribute.humanPoints.map((point) => (
+            <li key={point} className="panel flex items-start gap-3 p-5">
+              <HeartHandshake aria-hidden="true" className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
+              <p className="text-sm leading-relaxed text-ink-soft">{point}</p>
+            </li>
+          ))}
         </ul>
       </Container>
 
