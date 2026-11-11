@@ -85,7 +85,7 @@ npm run preview    # serve a produção (http://127.0.0.1:4174)
 
 ## Desdobramento no GitHub Pages
 
-O `vite.config.ts` define a base de produção como `/GPTCLONE-Website/` (a URL prevista
+O `vite.config.ts` define a base de produção como `/GPT/` (a URL prevista
 para o repositório do site). Para publicar:
 
 1. Siga o guia em `docs/PUBLISHING.md` (inclui o desdobramento com GitHub Actions).

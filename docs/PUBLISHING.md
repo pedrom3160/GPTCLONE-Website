@@ -6,7 +6,7 @@ o repositório do código principal intacto.
 
 ## Pré-requisitos
 
-- Repositório criado com o conteúdo desta pasta (por omissão: `pedrom3160/GPTCLONE-Website`).
+- Repositório criado com o conteúdo desta pasta (por omissão: `pedrom3160/GPT`).
   Tenha em atenção que o GitHub Pages só fica disponível em repositórios privados em planos
   pagos da conta; se a conta não tiver plano pago, a publicação exige um repositório
   público — a visibilidade só deve ser alterada de forma explícita e autorizada.
@@ -27,8 +27,8 @@ qualquer caminho desconhecido e o React Router resolve a rota.
 
 ## 2. Base do site (importante)
 
-Por omissão, `vite build` usa a base `/GPTCLONE-Website/`, correspondente à URL prevista
-`https://<utilizador>.github.io/GPTCLONE-Website/`. Se o repositório tiver outro nome e
+Por omissão, `vite build` usa a base `/GPT/`, correspondente à URL prevista
+`https://<utilizador>.github.io/GPT/`. Se o repositório tiver outro nome e
 continuar a ser um *project site*, sobrescreva a base durante o build:
 
 ```bash

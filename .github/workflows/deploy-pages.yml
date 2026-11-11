@@ -13,9 +13,9 @@ on:
   workflow_dispatch:
     inputs:
       WEBSITE_BASE_PATH:
-        description: 'Base path do site (ex.: /GPTCLONE-Website/ ou /)'
+        description: 'Base path do site (ex.: /GPT/ ou /)'
         required: false
-        default: '/GPTCLONE-Website/'
+        default: '/GPT/'
 
 permissions:
   contents: read
