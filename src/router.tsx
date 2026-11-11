@@ -39,7 +39,7 @@ function ScrollToTop() {
 }
 
 export function AppRouter() {
-  // Build base for GitHub Pages (`/GPT/` in production) and `/` in dev.
+  // Build base for GitHub Pages (`/about/` in production) and `/` in dev.
   const basename = import.meta.env.BASE_URL.replace(/\/$/, '')
   return (
     <BrowserRouter basename={basename}>

@@ -6,11 +6,11 @@ import { defineConfig, type Plugin } from 'vite'
 
 /**
  * Base path used when building for GitHub Pages (project site).
- * The default matches the repository `pedrom3160/GPT`.
+ * The default matches the repository `pedrom3160/about`.
  * Override with the WEBSITE_BASE_PATH environment variable when the
  * repository (and therefore the URL path) is different.
  */
-export const DEFAULT_BASE_PATH = '/GPT/'
+export const DEFAULT_BASE_PATH = '/about/'
 
 /**
  * GitHub Pages has no SPA fallback, but it serves `404.html` for every

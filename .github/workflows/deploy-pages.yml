@@ -13,9 +13,9 @@ on:
   workflow_dispatch:
     inputs:
       WEBSITE_BASE_PATH:
-        description: 'Base path do site (ex.: /GPT/ ou /)'
+        description: 'Base path do site (ex.: /about/ ou /)'
         required: false
-        default: '/GPT/'
+        default: '/about/'
 
 permissions:
   contents: read
